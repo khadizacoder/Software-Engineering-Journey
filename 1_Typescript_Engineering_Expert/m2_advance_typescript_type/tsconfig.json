@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "esnext",
+    "strict": true,
+    "skipLibCheck": true,
+
+    // same function 2 file er error remove korar jonno
+    "moduleDetection": "force",
+  }
+}

@@ -60,4 +60,4 @@ const getError = (msg : string) => {
     throw new Error(msg)
 }
 
-const A : null = getError("dbfkd")
+// const A : null = getError("dbfkd")

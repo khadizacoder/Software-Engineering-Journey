@@ -32,5 +32,5 @@ const greetings = another_greet();
 const getError = (msg) => {
     throw new Error(msg);
 };
-const A = getError("dbfkd");
 export {};
+// const A : null = getError("dbfkd")

@@ -13,17 +13,17 @@ const idd : identity = 89594835
 const iddd : identity = 89594835 + "kjgdjfg"
 
 
-console.log(id)
-console.log(idd)
+// console.log(id)
+// console.log(idd)
 
 
 // Literal Union
 
 type isStatus = "User" | "admin" | "manager"
 const user : isStatus = "User"
-console.log(user)
+// console.log(user)
 const user2 : isStatus = "admin"
-console.log(user2)
+// console.log(user2)
 
 
 // Object Union
@@ -47,4 +47,4 @@ const userId : User ={
     isStatus : 'admin',
     privileges : ["a", "b"]
 }
-console.log(userId)
+// console.log(userId)

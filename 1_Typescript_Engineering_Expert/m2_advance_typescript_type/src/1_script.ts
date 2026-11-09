@@ -6,7 +6,7 @@ import "./5_type_vs_interface.js"
 import "./6_different_type.js"
 import './7_type_assertion.js'
 import './8_narrowing_down.js'
-
+import './9_Generio.js'
 
 let fName : string = "khadiza Khatun";
 // console.log(fName)

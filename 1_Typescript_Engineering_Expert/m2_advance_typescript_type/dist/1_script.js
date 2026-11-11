@@ -7,6 +7,7 @@ import "./6_different_type.js";
 import './7_type_assertion.js';
 import './8_narrowing_down.js';
 import './9_Generio.js';
+import './10_promiss.js';
 let fName = "khadiza Khatun";
 // console.log(fName)
 // greetings()

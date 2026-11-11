@@ -1,24 +1,70 @@
-## interface ব্যবহার করে কাজ করা গেলে সেখানে type alias ব্যবহার করবো না। interface দিয়ে কাজ করার চেষ্টা করবো
+# Type Alias VS Interface in TypeScript
 
-# Type alias and interface এর মধ্যে পার্থক্য:
+## Introduction
 
-* Union, complex type তৌরি করতে type ব্যবহার করতে পারি And Object structure তৌরি করতে interface ব্যবহার করতে পারি
+In Typescript both type and interface are used to define types. However, there are some differences between them. We can use either one depending on the type of work.
 
-* Same নামের দুইটা interface create করলে marge হয়ে একটা হয়ে যায় And Same নামে দুইটা type create করলে error হবে এজন্য আলাদা নামে তৌরি করে & দিয়ে Marge করতে পারি 
+## Difference between Type Alias and Interface
 
+* We can create object structure with interface.
+* We can use type for Objects, Union, intersections and complex type
+* If we create two interfaces with the same name TypeScript merge them into one
+* If we create two type with the same name, Typescript shows an error. But we can merge different types using &
 
-## কখন একটির পরিবর্তে অন্যটি ব্যবহার করতে পারি?: 
+## Example
+**Using Interface**
 
-# Object structure:
-* যখন object structure তৌরি করার প্রয়োজন হয় তখন interface ব্যবহার করতে পারি ।
-* Same name এর দুটো structure লাগলে interface ব্যবহার করতে পারি ।
-
-
-# Union type:
-* Union type ব্যবহার করার প্রয়োজন হলে type alias ব্যবহার করতে পারি 
-
-* **Example**
 ```
-type isStatus = "user" | "admin" | "member";
-type status = "success":
+interface User {
+    name: string,
+    age: number,
+}
+
+interface User {
+    location : string
+}
+
+const user : User = {
+    name : "Khadiza",
+    age: 21,
+    location: "Khulna"
+}
 ```
+Both interfaces are merged into one
+
+**Using Type Alias**
+
+```
+type User = {
+    name: string,
+    age: number,
+}
+
+type Users = User & {
+    location : string
+}
+
+const user : Users = {
+    name : "Khadiza",
+    age: 21,
+    location: "Khulna"
+}
+```
+
+## When should you choose one over the other?
+
+**Interface:**
+
+* When it is necessary to create an object structure
+* If you need to merge interfaces with the same name.
+
+**Type Alias:**
+
+* When to create a Union Type.
+* When you need to create an intersection or complex type
+
+If it is possible to work with an interface, I will try to use an interface there. Otherwise, I will use a type alias.
+
+## Conclusion
+
+Both are useful in Typescript. I use interface for objects and type for unions and complex types.
